@@ -4,6 +4,7 @@ export class PlatformsData implements IPlatformsData {
 	constructor($androidProjectService: IPlatformProjectService,
 		$iOSProjectService: IPlatformProjectService) {
 
+// TODO Extend this to include web target... or repo lookup in future...
 		this.platformsData = {
 			ios: $iOSProjectService.platformData,
 			android: $androidProjectService.platformData
