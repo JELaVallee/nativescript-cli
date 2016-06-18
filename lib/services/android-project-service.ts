@@ -27,7 +27,7 @@ export class AndroidProjectService extends projectServiceBaseLib.PlatformProject
 		return this.$sysInfo.getSysInfo(path.join(__dirname, "..", "..", "package.json")).wait();
 	}
 
-	private _androidProjectPropertiesManagers: IDictionary<IAndroidProjectPropertiesManager>;
+	private _androidProjectPropertiesManagers: IDictionary<IWebAngular2ProjectPropertiesManager>;
 
 	constructor(private $androidEmulatorServices: Mobile.IEmulatorPlatformServices,
 		private $androidToolsInfo: IAndroidToolsInfo,

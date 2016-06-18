@@ -1,6 +1,6 @@
 import * as path from "path";
 
-export class AndroidProjectPropertiesManager implements IAndroidProjectPropertiesManager {
+export class AndroidProjectPropertiesManager implements IWebAngular2ProjectPropertiesManager {
 	private _editor: IPropertiesParserEditor = null;
 	private filePath: string = null;
 	private projectReferences: ILibRef[];

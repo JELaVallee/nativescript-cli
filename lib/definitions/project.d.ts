@@ -101,6 +101,10 @@ interface IAndroidProjectPropertiesManager {
 	removeProjectReference(referencePath: string): IFuture<void>;
 }
 
+interface IWebAngular2ProjectPropertiesManager {
+	getProjectReferences(): IFuture<ILibRef[]>;
+}
+
 interface ITestExecutionService {
 	startTestRunner(platform: string): IFuture<void>;
 	startKarmaServer(platform: string): IFuture<void>;

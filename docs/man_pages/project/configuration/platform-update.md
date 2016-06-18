@@ -7,6 +7,8 @@ Android latest runtime |`$ tns platform update android`
 Android selected runtime | `$ tns platform update android@<Version>`
 <% if(isMacOS) { %>iOS latest runtime | `$ tns platform update ios`
 iOS selected runtime | `$ tns platform update ios@<Version>` <% } %> 
+Web-AngularJS2 latest runtime | `$ tns platform update webangular2 [--framework-path <File Path>] [--symlink] [--platform-template <Platform Template>]`
+Web-AngularJS2 selected runtime | `$ tns platform update webangular2[@<Version>] [--framework-path <File Path>] [--symlink] [--platform-template <Platform Template>]`
 
 Updates the NativeScript runtime for the specified platform. <% if(isMacOS) { %>You must specify the target platform that you want to update.<% } %>
 

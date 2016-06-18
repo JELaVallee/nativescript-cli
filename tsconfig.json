@@ -6,7 +6,7 @@
 		"watch": true,
 		"declaration": false,
 		"removeComments": false,
-		"noImplicitAny": true,
+		"noImplicitAny": false,
 		"experimentalDecorators": true
 	},
 	"exclude": [

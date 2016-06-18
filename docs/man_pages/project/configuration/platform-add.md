@@ -7,6 +7,8 @@ Android latest runtime | `$ tns platform add android [--framework-path <File Pat
 Android selected runtime | `$ tns platform add android[@<Version>] [--framework-path <File Path>] [--symlink] [--sdk <API Level>] [--platform-template <Platform Template>]`
 <% if (isMacOS) { %>iOS latest runtime | `$ tns platform add ios [--framework-path <File Path>] [--symlink]`
 iOS selected runtime | `$ tns platform add ios[@<Version>] [--framework-path <File Path>] [--symlink] [--platform-template <Platform Template>]`<% } %>
+Web-AngularJS2 latest runtime | `$ tns platform add webangular2 [--framework-path <File Path>] [--symlink] [--platform-template <Platform Template>]`
+Web-AngularJS2 selected runtime | `$ tns platform add webangular2[@<Version>] [--framework-path <File Path>] [--symlink] [--platform-template <Platform Template>]`
 
 Configures the current project to target the selected platform. <% if(isHtml) { %>When you add a target platform, the NativeScript CLI creates a corresponding platform-specific subdirectory under the platforms directory. This platform-specific directory contains the necessary files to let you build your project for the target platform.<% } %>
 

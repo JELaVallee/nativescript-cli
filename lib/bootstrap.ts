@@ -10,6 +10,7 @@ $injector.require("projectDataService", "./services/project-data-service");
 $injector.require("projectService", "./services/project-service");
 $injector.require("androidProjectService", "./services/android-project-service");
 $injector.require("iOSProjectService", "./services/ios-project-service");
+$injector.require("webAngular2ProjectService", "./services/web-angular2-project-service");
 
 $injector.require("cocoapodsService", "./services/cocoapods-service");
 
@@ -96,6 +97,7 @@ $injector.require("infoService", "./services/info-service");
 $injector.requireCommand("info", "./commands/info");
 
 $injector.require("androidToolsInfo", "./android-tools-info");
+$injector.require("webAngular2ToolsInfo", "./web-angular2-tools-info");
 
 $injector.requireCommand("platform|clean", "./commands/platform-clean");
 

@@ -7,6 +7,7 @@ export let TNS_MODULES_FOLDER_NAME = "tns_modules";
 export let TNS_CORE_MODULES_NAME = "tns-core-modules";
 export let TNS_ANDROID_RUNTIME_NAME = "tns-android";
 export let TNS_IOS_RUNTIME_NAME = "tns-ios";
+export let TNS_WEBANGULAR2_RUNTIME_NAME = "tns-web-angular2";
 export let PACKAGE_JSON_FILE_NAME = "package.json";
 export let NODE_MODULE_CACHE_PATH_KEY_NAME = "node-modules-cache-path";
 export let DEFAULT_APP_IDENTIFIER_PREFIX = "org.nativescript";

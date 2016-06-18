@@ -215,6 +215,32 @@ interface IAndroidToolsInfoData {
 	targetSdkVersion: number;
 }
 
+/**
+ * Provides access to information about installed Android tools and SDKs versions.
+ */
+interface IWebAngular2ToolsInfo {
+	// TODO @jelavallee - Describe additional tooling methods
+	/**
+	 * Provides information about installed web tooling and modules.
+	 * @return {IWebAngular2ToolsInfoData} Information about installed web tooling and modules.
+	 */
+	getToolsInfo(): IFuture<IWebAngular2ToolsInfoData>;
+
+	/**
+	 * Validates the information about required web tooling and module versions.
+	 * @param {any} options Defines if the warning messages should treated as error and if the targetSdk value should be validated as well.
+	 * @return {boolean} True if there are detected issues, false otherwise.
+	 */
+	validateInfo(options?: { showWarningsAsErrors: boolean, validateTargetSdk: boolean }): IFuture<boolean>;
+}
+
+/**
+ * Describes information about installed web tools and modules.
+ */
+interface IWebAngular2ToolsInfoData {
+	// TODO @jelavallee - Describe tool info data model
+}
+
 interface ISocketProxyFactory {
 	createSocketProxy(factory: () => any): IFuture<any>;
 }

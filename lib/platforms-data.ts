@@ -2,12 +2,14 @@ export class PlatformsData implements IPlatformsData {
 	private platformsData : { [index: string]: any } = {};
 
 	constructor($androidProjectService: IPlatformProjectService,
-		$iOSProjectService: IPlatformProjectService) {
+		$iOSProjectService: IPlatformProjectService,
+		$webAngular2ProjectService: IPlatformProjectService) {
 
-// TODO Extend this to include web target... or repo lookup in future...
+        // TODO @jelavallee - Extend this to include web target... or repo lookup in future...
 		this.platformsData = {
 			ios: $iOSProjectService.platformData,
-			android: $androidProjectService.platformData
+			android: $androidProjectService.platformData,
+			webangular2: $webAngular2ProjectService.platformData
 		};
 	}
 
@@ -19,10 +21,12 @@ export class PlatformsData implements IPlatformsData {
 		return this.platformsData[platform.toLowerCase()];
 	}
 
+    // TODO @jelavallee - Would be nice to do these with dash-sep package-naming-style
 	public get availablePlatforms(): any {
 		return {
 			iOS: "ios",
-			Android: "android"
+			Android: "android",
+            WebAngular2: "webangular2"
 		};
 	}
 }
