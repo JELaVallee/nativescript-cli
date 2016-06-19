@@ -49,18 +49,18 @@ export class WebAngular2ProjectService extends projectServiceBaseLib.PlatformPro
             let projectRoot = path.join(this.$projectData.platformsDir, "web-angularjs2");
             let packageName = this.getProjectNameFromId();
             this._platformData = {
-                frameworkPackageName: "tns-web-angular2",
+                frameworkPackageName: "test-tns-web-angular-2",
                 normalizedPlatformName: "WebAngular2",
                 // TODO @jelavallee - target this to web app appropriate location...
-                appDestinationDirectoryPath: path.join(projectRoot, "src", "main", "assets"),
+                appDestinationDirectoryPath: path.join(projectRoot, "src"),
                 platformProjectService: this,
                 projectRoot: projectRoot,
                 // TODO @jelavallee - target this to web app appropriate gulp commands...
-                deviceBuildOutputPath: path.join(projectRoot, "build", "outputs", "apk"),
+                deviceBuildOutputPath: path.join(projectRoot, "dist"),
                 // TODO @jelavallee - purge this?
                 validPackageNamesForDevice: [],
                 // TODO @jelavallee - target this to web app appropriate extensions...
-                frameworkFilesExtensions: [".jar", ".dat", ".so"],
+                frameworkFilesExtensions: [".js", ".html", ".json"],
                 configurationFileName: "package.json",
                 // TODO @jelavallee - target this to web app appropriate location...
                 configurationFilePath: path.join(projectRoot, "src", "main", "AndroidManifest.xml"),
@@ -92,7 +92,10 @@ export class WebAngular2ProjectService extends projectServiceBaseLib.PlatformPro
 	}
 
 	public createProject(frameworkDir: string, frameworkVersion: string, pathToTemplate?: string): IFuture<void> {
-        return (() => {}).future<any>()();
+        return (() => {
+			this.$fs.ensureDirectoryExists(this.platformData.projectRoot).wait();
+			this.copy(this.platformData.projectRoot, frameworkDir, "*", "-R");
+		}).future<any>()();
     }
 
 	public interpolateData(): IFuture<void> {

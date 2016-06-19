@@ -10,7 +10,7 @@ export class NpmInstallationManager implements INpmInstallationManager {
 		"tns-android": constants.PROJECT_FRAMEWORK_FOLDER_NAME,
 		"tns-ios": constants.PROJECT_FRAMEWORK_FOLDER_NAME,
 		"tns-ios-inspector": "WebInspectorUI",
-		"tns-web-angular2": constants.PROJECT_FRAMEWORK_FOLDER_NAME,
+		"test-tns-web-angular-2": constants.PROJECT_FRAMEWORK_FOLDER_NAME,
 		"tns-template-hello-world": constants.APP_RESOURCES_FOLDER_NAME,
 		"tns-template-hello-world-ts": constants.APP_RESOURCES_FOLDER_NAME,
 		"tns-template-hello-world-ng": constants.APP_RESOURCES_FOLDER_NAME
